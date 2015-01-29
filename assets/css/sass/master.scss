@@ -1,0 +1,164 @@
+// Import Bourbon & Neat
+@import "bourbon/bourbon"; // or "bourbon" when in Rails
+@import "grid-settings";
+@import "neat/neat"; // or "neat" when in Rails
+
+// Import modules
+@import "modules/colors";
+@import "modules/app";
+@import "modules/breakpoints";
+@import "modules/buttons";
+@import "modules/lists";
+@import "modules/forms";
+@import "modules/typography";
+@import "modules/reset";
+
+// Import Partials
+@import "partials/header";
+@import "partials/general";
+@import "partials/main";
+@import "partials/navigation";
+@import "partials/sidebar";
+@import "partials/footer";
+
+// Current styles, You can delete this file when you start your project
+/*@import "partials/current";*/
+
+body{
+	margin: 0;
+	font-family: 'Vollkorn', serif;
+	
+	#wrapper{
+
+		header,nav, img, li a, h1, h2{
+		  transition: all 1s;
+		  -moz-transition: all 1s; /* Firefox 4 */
+		  -webkit-transition: all 1s; /* Safari and Chrome */
+		  -o-transition: all 1s; /* Opera */
+		}
+
+		header.full{
+			@include outer-container;
+			height:100vh;
+			.container{
+				@include span-columns(12);
+				padding-top: 90px;
+				overflow: hidden;
+				position: fixed;
+				top: 0;
+				z-index: 999
+			}
+			
+			
+
+			h1, h2{
+				font-size: 60px;
+				line-height: 60px;
+				font-weight: lighter;
+				margin: 0;
+
+			}
+			h1{
+				margin-bottom: 10px;
+			}
+			nav{
+				padding-top: 90px;
+				ul{
+					padding: 0;
+					list-style-type: none;
+					li{
+						font-size: 30px;
+						position: relative;
+						a{
+							text-decoration: none;
+							color: black;
+							&:hover {
+								text-decoration: line-through;
+							}
+						}
+
+					}
+				}
+			}
+		}
+		header.small{
+			@include outer-container;
+
+			height:300px;
+			.container{
+				@include span-columns(12);
+				padding-top: 30px;
+				overflow: hidden;
+				position: fixed;
+				top: 0;
+				z-index: 999
+			}
+			
+			
+
+			h1, h2{
+				font-size: 30px;
+				line-height: 30px;
+				font-weight: lighter;
+				margin: 0;
+
+			}
+			h1{
+				margin-bottom: 5px;
+			}
+			nav{
+				padding-top: 5px;
+				ul{
+					padding: 0;
+					list-style-type: none;
+					li{
+						font-size: 15px;
+						position: relative;
+						a{
+							text-decoration: none;
+							color: black;
+							&:hover {
+								text-decoration: line-through;
+							}
+						}
+
+					}
+				}
+			}
+		}
+		section{
+
+			height:100vh;
+			background-color: gray;
+			
+			article{
+				@include outer-container;
+				@include omega();
+			}
+		}
+
+	}
+	footer{
+			
+			@include outer-container;
+			
+			
+			
+			
+			div{
+				// @include span-columns(12);
+				position: fixed;
+				bottom: 0;
+				padding-bottom: 30px;
+			}
+		}
+
+}
+
+
+/** Notes
+
+Bourbon have a clearfix in bourbon/addons. just use @include clearfix;
+
+**/
+
