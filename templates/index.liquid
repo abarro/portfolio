@@ -1,47 +1,16 @@
 {% block content %} 
 	
-	<section class="job-category">
-		<div id="badabum" id="slides">
-			<article class="slide active-slide cover">
-				<div class="slide-content">
-					<h2>Badabum</h2>
-				</div>
-			</article>
-		</div>
-		<div class="slider-nav">
-	      <a class="arrow-prev"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-prev.png"></a>
-	      <ul class="slider-dots">
-	        <li class="dot active-dot">&bull;</li>
-	        <li class="dot">&bull;</li>
-	        <li class="dot">&bull;</li>
-	        <li class="dot">&bull;</li>
-	      </ul>
-	      <a class="arrow-next"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-next.png"></a>
-	    </div> 
+	{% include "badabum" %}
 
-	</section>
+	{% include "campanhas" %}
 
-	<section id="campanhas" class="job-category">
-		<div id="slides">
-			<article class="slide active-slide cover">
-				<div class="slide-content">
-					<h2>Campanhas</h2>
-				</div>
-			</article>
-		</div>
-		<div class="slider-nav">
-	      <a class="arrow-prev"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-prev.png"></a>
-	      <ul class="slider-dots">
-	        <li class="dot active-dot">&bull;</li>
-	        <li class="dot">&bull;</li>
-	        <li class="dot">&bull;</li>
-	        <li class="dot">&bull;</li>
-	      </ul>
-	      <a class="arrow-next"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-next.png"></a>
-	    </div> 
+	{% include "prototipos" %}
 
-	</section>
+	{% include "apresentacoes" %}
+
+	{% include "conteudo" %}
 	
+	{% include "sobre" %}
 	
 
 {% endblock %}

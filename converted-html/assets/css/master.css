@@ -83,7 +83,7 @@ body {
     body section.job-category .active-slide {
       display: block; }
     body section.job-category .cover {
-      background: blue url("/assets/img/bg.jpg") no-repeat center center;
+      background: blue url("../img/bg.jpg") no-repeat center center;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
